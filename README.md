@@ -7,10 +7,10 @@ This project is created as a collaboration with TechLabs Copenhagen. The purpose
 
 - [@annayeva](https://github.com/annayeva/) - Web Developement
 - [@levkurtis](https://github.com/levkurtis/) - AI
-- @Finley
-- @John
-- @Laia
-- @Camila
+- @Finley - UX
+- @John - Data Sciecne
+- @Laia - Data Science
+- @Camila - Data Science
 
 
 
