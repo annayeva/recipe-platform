@@ -1,9 +1,12 @@
 import './App.css';
+import Header from './components/Header';
+import SearchRecipes from './components/SearchRecipes';
 
 function App() {
   return (
     <div className="App">
-      <p>hello world</p>
+      <Header titleText="Recipe platform" pText="-" />
+      <SearchRecipes />
     </div>
   );
 }

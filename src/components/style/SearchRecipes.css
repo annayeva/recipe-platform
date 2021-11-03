@@ -1,0 +1,56 @@
+
+
+.search-form {
+    font-size: 17px;
+    color:rgb(31, 31, 31);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 1em;
+}
+
+.search-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.search-form button {
+    padding: 1em 2em 1em 2em;
+    background-color: rgba(0,0,0,0.75);
+    color: white;
+    border: none;
+    transition: background-color 250ms;
+    border-radius:5px;
+}
+
+.search-form button:hover {
+    background-color: rgba(139, 139, 139, 0.75);
+    color: black;
+}
+
+.search-form input {
+    font-size: 17px;
+}
+
+.card-list {
+    padding-top: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: auto;
+    margin-left: 6em;
+    margin-right: 6em;
+}
+
+.recipes-search-area {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.no-results-display {
+    width: 100%;
+
+}

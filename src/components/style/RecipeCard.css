@@ -1,0 +1,12 @@
+.card-container {
+    border: solid black 1px;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    width: 15em;
+
+}
+
+.card-container img {
+    max-width: 100%;
+    height: auto;
+}
