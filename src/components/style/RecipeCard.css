@@ -1,12 +1,20 @@
 .card-container {
-    border: solid black 1px;
     margin-bottom: 1em;
     margin-right: 1em;
-    width: 15em;
-
+    width: 23%;
+    background-color: white;
 }
 
 .card-container img {
     max-width: 100%;
     height: auto;
+    filter: sepia(20%);
+    filter: opacity(82%);
 }
+
+@media only screen and (max-width: 600px) {
+    .card-container {
+        width: 90%;
+    }
+
+ }

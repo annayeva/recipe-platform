@@ -1,11 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Patrick+Hand&display=swap');
 
+h1 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 80px;
+    margin-bottom: 0;
+}
+
+h5 {
+    margin-top: 0;
+    letter-spacing: 2px;
+}
+
+body {
+    background-color: rgb(224, 224, 224);
+}
+
+.search-form input {
+    border: none;
+    height: 2em;
+    background-color: white !important;
+}
 
 .search-form {
     font-size: 17px;
-    color:rgb(31, 31, 31);
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-content: center;
+    align-items: center;
     column-gap: 1em;
 }
 
@@ -18,7 +40,7 @@
 
 .search-form button {
     padding: 1em 2em 1em 2em;
-    background-color: rgba(0,0,0,0.75);
+    background-color: rgba(0,0,0);
     color: white;
     border: none;
     transition: background-color 250ms;
@@ -26,7 +48,7 @@
 }
 
 .search-form button:hover {
-    background-color: rgba(139, 139, 139, 0.75);
+    background-color: rgba(139, 139, 139);
     color: black;
 }
 
@@ -42,15 +64,35 @@
     width: auto;
     margin-left: 6em;
     margin-right: 6em;
+    align-items: flex-start;
 }
 
 .recipes-search-area {
     display: flex;
     flex-direction: column;
-
+    justify-content: center;
+    color:white;
 }
 
 .no-results-display {
     width: 100%;
-
 }
+
+@media only screen and (max-width: 600px) {
+    .search-form {
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 1em;
+        margin-right: 1em;
+     }
+
+     
+    .search-form input {
+        height: 2em;
+        margin-bottom: 1em;
+    }
+
+    .card-list {
+        margin: 1em;
+     }
+  }

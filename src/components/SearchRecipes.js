@@ -1,11 +1,11 @@
 import React, {useState} from "react";
 import "./style/SearchRecipes.css";
 import RecipeCard from "./RecipeCard";
+import Header from './Header';
 
 export default function SearchRecipes() {
     const [searchQuery, setSearchQuery] = useState("");
     const [recipesResults, setRecipesResults] = useState([]);
-    let noResultHeader = <h4 className="no-results-display">No results found..</h4>;
 
     const searchRecipes = async (e) => {
         e.preventDefault();
@@ -29,15 +29,12 @@ export default function SearchRecipes() {
     }
 
     return (
-        <div className="recipes-search-area">
-            <form className="search-form" onSubmit={searchRecipes}>
-                <label htmlFor="query" className="search-label">Type in a key word: </label>
-                <input value={searchQuery} onChange={handleChange} type="text" name="query" placeholder="i.e. chicken"/>
-                <button type="submit">Search</button>
-            </form>
-            <div className="card-list">
-                {recipesResults ? recipesResults.map(recipe => <RecipeCard recipe={recipe} />) : noResultHeader}
-            </div>
+        <div>
+            <Header 
+                searchRecipes={searchRecipes} 
+                searchQuery={searchQuery} 
+                handleChange={handleChange}
+                recipesResults={recipesResults} />
         </div>
     )
 }
