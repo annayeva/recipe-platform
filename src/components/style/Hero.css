@@ -2,8 +2,8 @@
     height: 30em;
     width: 100%;
     display: flex;
-    background-position: center; 
+    background-position: top; 
     background-repeat: no-repeat;
     background-size: cover; 
-    background-image: url("../images/heroImage6.jpeg");
+    background-image: url("../images/heroImage8.jpeg");
 }

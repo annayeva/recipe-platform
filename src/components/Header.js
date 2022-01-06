@@ -1,4 +1,5 @@
 import RecipeCard from "./RecipeCard";
+import "./style/Hero.css";
 
 function Header ({searchRecipes, searchQuery, handleChange, recipesResults}) {
     
