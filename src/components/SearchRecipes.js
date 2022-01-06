@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import "./style/SearchRecipes.css";
-import RecipeCard from "./RecipeCard";
+//import RecipeCard from "./RecipeCard";
 import Header from './Header';
 
 export default function SearchRecipes() {
