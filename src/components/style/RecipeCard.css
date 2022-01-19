@@ -10,6 +10,7 @@
     height: auto;
     filter: sepia(20%);
     filter: opacity(82%);
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 600px) {
