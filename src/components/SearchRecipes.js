@@ -2,12 +2,16 @@ import React, {useState} from "react";
 import "./style/SearchRecipes.css";
 //import RecipeCard from "./RecipeCard";
 import Header from './Header';
+import Results from "./Results";
+import DetailedRecipe from "./DetailedRecipe";
 
 export default function SearchRecipes() {
     const [searchQuery, setSearchQuery] = useState("");
     const [recipesResults, setRecipesResults] = useState([]);
+    const [detailedRecipe, setDetailedRecipe] = useState({});
 
     const searchRecipes = async (e) => {
+        setDetailedRecipe({});
         e.preventDefault();
         const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchQuery}`;
 
@@ -19,13 +23,17 @@ export default function SearchRecipes() {
         } catch(err){
             console.log(err);
         }
-
-        console.log("recipesResults: " + recipesResults);
-
     }
 
     function handleChange (e) {
         setSearchQuery(e.target.value);
+    }
+
+    function inspectRecipe(id) {
+        let inspectedRecipe = recipesResults.filter(recipe => recipe.idMeal === id);
+        setDetailedRecipe(inspectedRecipe[0]);
+        setRecipesResults([]);
+        //console.log(JSON.stringify(detailedRecipe.strMeal));
     }
 
     return (
@@ -34,7 +42,12 @@ export default function SearchRecipes() {
                 searchRecipes={searchRecipes} 
                 searchQuery={searchQuery} 
                 handleChange={handleChange}
-                recipesResults={recipesResults} />
+            />
+            <Results 
+                recipesResults={recipesResults} 
+                inspectRecipe={inspectRecipe}
+            />
+            <DetailedRecipe detailedRecipe={detailedRecipe} />
         </div>
     )
 }
