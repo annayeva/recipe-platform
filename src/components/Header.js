@@ -8,7 +8,7 @@ function Header ({searchRecipes, searchQuery, handleChange, recipesResults}) {
     return(
         <header>
             <div className="recipes-search-area hero-image">
-                <h1>Recipe river</h1>
+                <h1>Recipe River</h1>
                 <h5>Your ultimate recipe search platform</h5>
                 <form className="search-form" onSubmit={searchRecipes}>
                     <label htmlFor="query" className="search-label">Type in a key word: </label>
